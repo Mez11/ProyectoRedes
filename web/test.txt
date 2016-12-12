@@ -1,0 +1,3 @@
+Este es un documento de texto simple
+solamente para comprobar el correcto uso
+de el querido servidor web

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    
+    <!-- RUTA del archivo en donde escribir el .log  -->
+    <!-- NOTA: ${user.home} es una variable de LogBack para insertar el "/home/pma" -->
+    <file>${user.home}/Desktop/hilos.log</file>
+    <encoder>
+      <pattern>%d{HH:mm:ss} %-5level %logger{36}.%M - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <root level="TRACE">
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>
