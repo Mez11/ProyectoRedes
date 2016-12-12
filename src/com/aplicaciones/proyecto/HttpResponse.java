@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public class HttpResponse implements HttpResponseStatusCodes, HttpResponseFileTypes {
 	
 	public static final String SERVER_NAME = "Huarache ClonCat";
-	//private static final Logger log = LoggerFactory.getLogger(HttpResponse.class);
+	private static final Logger log = LoggerFactory.getLogger(HttpResponse.class);
 	
 	private int status;
 	private int contentLength;
@@ -133,12 +133,14 @@ public class HttpResponse implements HttpResponseStatusCodes, HttpResponseFileTy
 		
 		content = builder.toString();
 		if( debug ){
-			//log.debug("**********");
-			System.out.println( "**********");
-			//log.debug("[HostHandler] Header to be send to the browser:");
-			System.out.println( "[HostHandler] Header to be send to the browser:");
-			//log.debug(content);
-			System.out.println( content );
+			log.debug("**********");
+			//System.out.println( "**********");
+			log.debug("[HostHandler] Header to be send to the browser:");
+			//System.out.println( "[HostHandler] Header to be send to the browser:");
+			log.debug(content);
+			//System.out.println( content );
+			log.debug("[HostHandler] End of header");
+			log.debug("**********");
 			//System.out.println( "[HostHandler] End of header");
 			//System.out.println( "**********");
 		}
